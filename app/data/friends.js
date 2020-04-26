@@ -1,6 +1,22 @@
 var friendsArray = [
     {
-        name: "",
+        name: "Ted",
+        photo: "https://vignette.wikia.nocookie.net/himym/images/1/14/WB0rq.jpg/revision/latest?cb=20130113174836",
+        scores: [
+            "5",
+            "4",
+            "3",
+            "2",
+            "2",
+            "1",
+            "3",
+            "3",
+            "5",
+            "1"
+        ]
+    },
+     {
+        name: "Robin",
         photo: "",
         scores: [
             "",
@@ -16,23 +32,7 @@ var friendsArray = [
         ]
     },
      {
-        name: "",
-        photo: "",
-        scores: [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-     {
-        name: "",
+        name: "Barney",
         photo: "",
         scores: [
             "",
@@ -48,7 +48,7 @@ var friendsArray = [
         ]
     },
     {
-        name: "",
+        name: "Lily",
         photo: "",
         scores: [
             "",
@@ -64,7 +64,7 @@ var friendsArray = [
         ]
     },
     {
-        name: "",
+        name: "Marshall",
         photo: "",
         scores: [
             "",

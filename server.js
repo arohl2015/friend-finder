@@ -1,6 +1,6 @@
 // Adding requirement for dependencies within app
 var express = require("express");
-var path = require ("path");
+var path = require("path");
 
 //After adding dependencies, need to create an Express server within node
 var app = express();
