@@ -160,6 +160,27 @@
         </div>
         <br>
         <br>
+<!-- Modal needs to pop after the user survery is completed-->
+<!-- Using pre-built bootstrap modal for easier completion -->
+<div class="modal fade" id="friendModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Meet your New Friend!</h4>
+        </div>
+        <div class="modal-body">
+          <h3 id=""></h3>
+          <img id="" src="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
         <!-- Re-adding footer that links to the friends API and my GitHub repo -->
         <footer class="footer">
             <div class="container">
@@ -177,7 +198,7 @@
         event.preventDefault;
         var userRecord = {
             name: $("#name").val(),
-            photo: $("#picture").val(),
+            photo: $("#photo").val(),
             scores: [
                 $("#question1").val(),
                 $("#question2").val(),
@@ -190,17 +211,14 @@
                 $("#question9").val(),
                 $("#question10").val()
             ]
-        }
+        };
         console.log(userRecord);
         // Load data from the server using a HTTP POST request:
-        $.ajax(
-            {
-                url: "/api/friends",
-                data: userRecord,
-                type: "POST",
-                success: function (response) {
-                    console.log(response);
-                }
-            })
+        $.post("/api/friends", userRecord, function(data) {
+
+
+        }
+
+          
     })
 </script>
