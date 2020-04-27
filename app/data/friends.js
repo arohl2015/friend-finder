@@ -1,4 +1,4 @@
-var friendsArray = [
+var friends = [
     {
         name: "Ted",
         photo: "https://vignette.wikia.nocookie.net/himym/images/1/14/WB0rq.jpg/revision/latest?cb=20130113174836",
@@ -13,11 +13,11 @@ var friendsArray = [
             "1",
             "4",
             "5"
-    
+        ]
     },
      {
         name: "Robin",
-        photo: "",
+        photo: "https://upload.wikimedia.org/wikipedia/en/c/c9/Robin_Scherbatsky.png",
         scores: [
             "1",
             "4",
@@ -33,7 +33,7 @@ var friendsArray = [
     },
      {
         name: "Barney",
-        photo: "",
+        photo: "https://www.itl.cat/pngfile/big/107-1078917_how-i-met-your-mother-images-barney-hd.png",
         scores: [
             "4",
             "4",
@@ -49,7 +49,7 @@ var friendsArray = [
     },
     {
         name: "Lily",
-        photo: "",
+        photo: "https://vignette.wikia.nocookie.net/p__/images/a/a1/LilyAldrin.jpg/revision/latest?cb=20130201001620&path-prefix=protagonist",
         scores: [
             "3",
             "1",
@@ -65,7 +65,7 @@ var friendsArray = [
     },
     {
         name: "Marshall",
-        photo: "",
+        photo: "https://vignette.wikia.nocookie.net/himym/images/5/50/PlcCt.jpg/revision/latest/scale-to-width-down/340?cb=20130113174817",
         scores: [
             "3",
             "2",
@@ -82,4 +82,4 @@ var friendsArray = [
   ];
   
   // the code below makes the array above accessible to the other files I created
-  module.exports = friendsArray;
+  module.exports = friends;

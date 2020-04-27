@@ -6,40 +6,43 @@
 var friends = require("../data/friends.js");
 
 // next, need to export the data
-module.exports = function(app) {
-// API GET Request
- app.get("/api/friends", function(req, res) {
-    res.json(friends);
-  });
+module.exports = function (app) {
+    // API GET Request to display JSON of all friends
+    app.get("/api/friends", function (request, response) {
+        response.json(friends);
+    });
+    // API POST Request to handle the incoming survey results
+    app.post("/api/friends", function (request, response) {
+        console.log(request.body.scores);
+        //this variable receives all the user data
+        var currentUser = request.body;
+        // Determine the user's most compatible friend using the following as a guide:
+        // Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
+        // question by question. Add up the differences to calculate the totalDifference.
+        for (var i = 0; i < currentUser.scores.length; i++) {
+            currentUser.scores[i] = parseInt(currentUser.scores[i]);
+        }
+        //create variables to create the match and difference between scores
+        var friendsIndex = 0;
+        var minScore = 100;
+        //Need to create a for loop that compares the difference between current user's scores against those from other users
+        for (var i = 0; i < friends.length; i++) {
+            var totalScore = 0;
+            for (var j = 0; j < friends[i].scores.length; j++) {
+        //Remember to use the absolute value of the differences - Math.abs returns the absolute value of the given number.
+                var score = Math.abs(currentUser.scores[j] - friends[i].scores[j]);
+                totalScore += score;
+        //The closest match will be the user with the least amount of difference.
+            }
+            if (totalScore < minScore) {
+                friendsIndex = i;
+                minScore = totalScore;
+            }
+        }
+        //Add currentUser to the friends array after a match is found and push the data
+        friends.push(currentUser);
 
-// API POST Request
-// Determine the user's most compatible friend using the following as a guide:
-// Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
-// With that done, compare the difference between current user's scores against those from other users,
-// question by question. Add up the differences to calculate the totalDifference.
-// Example:
-// User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
-// User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
-// Total Difference: 2 + 1 + 2 = 5
-// Remember to use the absolute value of the differences. 
-// Put another way: no negative solutions! Your app should calculate both 5-3 and 3-5 as 2, and so on.
-// The closest match will be the user with the least amount of difference.
-// Once you've found the current user's most compatible friend, display the result as a modal pop-up.
-// The modal should display both the name and picture of the closest match.
-app.post("/api/friends", function(request, response) {
-console.log(request.body);
-var current = request.body// loop scores createtotal = 
-// bestmatch 
-//diffscore = 1900000
-for (let index = 0; index < friends.length; index++) {
-        const element = friends[index];
-        // for(j friendsArray[i].scores.length)
-               // total
-         // if (  total from loop // createtotla lin 31)   
-                  //diffcore = 
-                   //bestmatch = freiendsaraay[i]
-    }
-// push currentuser to friends array
-// res.json ({ user: bestmatch, diffscore:score})
-})
-}
+        //Last step is to send this back to the browser
+        response.json(friends[friendsIndex]);
+    });
+};

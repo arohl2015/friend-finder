@@ -12,156 +12,195 @@
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
-
+<!-- The below holds my code to create the survey questions with a dropdown for the responses ranked from 1-5 -->
 <body>
     <div class="container content">
-		<h1>Survey Questions</h1>
-		<p>Please take the short survey below to find your perfect friend match</p>
-		<form>
-			<div class="form-group">
-				<input id="name" type="text" class="form-control" placeholder="Name (Required)">
-			</div>
-			<div class="form-group">
-				<input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
-			</div>
-        <div class="form-group">
-            <label for="question1">I like to tell long stories:</label>
-            <select class="form-control" id="question1">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="question2">I am good at making decisions:</label>
-            <select class="form-control" id="question2">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="question3">I consider myself a huge sports fan:</label>
-            <select class="form-control" id="question3">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="question4">I have a creative side:</label>
-            <select class="form-control" id="question4">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="question5">I enjoy dressing up:</label>
-            <select class="form-control" id="question5">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="question6">I don't mind cold weather:</label>
-            <select class="form-control" id="question6">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="question7">I think all friends should abide by a code:</label>
-            <select class="form-control" id="question7">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="question8">I believe in the paranormal:</label>
-            <select class="form-control" id="question8">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="question9">I have always known what I wanted to do for a career:</label>
-            <select class="form-control" id="question9">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="question10">I believe in destiny and soulmates:</label>
-            <select class="form-control" id="question10">
-                <option value="1">1 Strongly Disagree</option>
-                <option value="2">2 Disagree</option>
-                <option value="3">3 Neutral</option>
-                <option value="4">4 Agree</option>
-                <option value="5">5 Strongly Agree</option>
-            </select>
-        </div>
-    </form>
+        <h1>Survey Questions</h1>
+        <p>Please take the short survey below to find your perfect friend match</p>
+        <form>
+            <div class="form-group">
+                <input id="name" type="text" class="form-control" placeholder="Name (Required)">
+            </div>
+            <div class="form-group">
+                <input id="photo" type="text" class="form-control" placeholder="Link to Profile Photo (Required)">
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 1</strong>
+                </h5>
+                <label for="question1">I enjoy telling long stories:</label>
+                <select class="form-control" id="question1">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 2</strong>
+                </h5>
+                <label for="question2">I am a good decision maker:</label>
+                <select class="form-control" id="question2">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 3</strong>
+                </h5>
+                <label for="question3">I consider myself a huge sports fan:</label>
+                <select class="form-control" id="question3">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 4</strong>
+                </h5>
+                <label for="question4">I have a creative side:</label>
+                <select class="form-control" id="question4">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 5</strong>
+                </h5>
+                <label for="question5">I enjoy dressing up:</label>
+                <select class="form-control" id="question5">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 6</strong>
+                </h5>
+                <label for="question6">I don't mind cold weather:</label>
+                <select class="form-control" id="question6">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 7</strong>
+                </h5>
+                <label for="question7">I think all friends should abide by a code:</label>
+                <select class="form-control" id="question7">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 8</strong>
+                </h5>
+                <label for="question8">I believe in the paranormal:</label>
+                <select class="form-control" id="question8">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 9</strong>
+                </h5>
+                <label for="question9">I have always known what I wanted to do for a career:</label>
+                <select class="form-control" id="question9">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <h5>
+                    <strong>Question 10</strong>
+                </h5>
+                <label for="question10">I believe in soulmates:</label>
+                <select class="form-control" id="question10">
+                    <option value="1">1 Strongly Disagree</option>
+                    <option value="2">2 Disagree</option>
+                    <option value="3">3 Neutral</option>
+                    <option value="4">4 Agree</option>
+                    <option value="5">5 Strongly Agree</option>
+                </select>
+            </div>
+        </form>
         <div class="text-center">
-			<button id="submitButton" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
-		</div>
-
-        <script>
-            console.log("js file loaded");
-            $("#surveyButton").on("click", function (event) {
-                event.preventDefault;
-                var userRecord = {
-                    name: $("#name").val(),
-                    photo: $("#picture").val(),
-                    scores: [
-                        $("#question1").val(),
-                        $("#question2").val(),
-                        $("#question3").val(),
-                        $("#question4").val(),
-                        $("#question5").val(),
-                        $("#question6").val(),
-                        $("#question7").val(),
-                        $("#question8").val(),
-                        $("#question9").val(),
-                        $("#question10").val()
-                    ]
-                }
-                console.log(userRecord);
-                $.ajax(
-                    {
-                        url: "/api/friends",
-                        data: userRecord,
-                        type: "POST",
-                        success: function (response) {
-                            console.log(response);
-                        }
-                    })
-            })
-        </script>
-
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+        </div>
+        <br>
+        <br>
+        <!-- Re-adding footer that links to the friends API and my GitHub repo -->
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">API Table Link</a> | <a href="https://github.com/arohl2015/friend-finder">GitHub Repo</a>
+            </div>
+        </footer>
 </body>
 
 </html>
+<!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<!-- On click-event to take in the user input from the survey -->
+<script type="text/javascript">
+    console.log("js file loaded");
+    $(".submit").on("click", function (event) {
+        event.preventDefault;
+        var userRecord = {
+            name: $("#name").val(),
+            photo: $("#picture").val(),
+            scores: [
+                $("#question1").val(),
+                $("#question2").val(),
+                $("#question3").val(),
+                $("#question4").val(),
+                $("#question5").val(),
+                $("#question6").val(),
+                $("#question7").val(),
+                $("#question8").val(),
+                $("#question9").val(),
+                $("#question10").val()
+            ]
+        }
+        console.log(userRecord);
+        // Load data from the server using a HTTP POST request:
+        $.ajax(
+            {
+                url: "/api/friends",
+                data: userRecord,
+                type: "POST",
+                success: function (response) {
+                    console.log(response);
+                }
+            })
+    })
+</script>
