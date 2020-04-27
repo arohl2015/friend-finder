@@ -13,7 +13,7 @@ var friendsArray = [
             "3",
             "5",
             "1"
-        ]
+    
     },
      {
         name: "Robin",

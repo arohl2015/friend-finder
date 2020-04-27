@@ -26,14 +26,20 @@ module.exports = function(app) {
 // The closest match will be the user with the least amount of difference.
 // Once you've found the current user's most compatible friend, display the result as a modal pop-up.
 // The modal should display both the name and picture of the closest match.
-app.post("/api/friends", function(req, res) {
-console.log();
-// var = ?
-
-for (let index = 0; index < friendsArray.length; index++) {
-        const element = friendsArray[index];
+app.post("/api/friends", function(request, response) {
+console.log(request.body);
+var current = request.body// loop scores createtotal = 
+// bestmatch 
+//diffscore = 1900000
+for (let index = 0; index < friends.length; index++) {
+        const element = friends[index];
+        // for(j friendsArray[i].scores.length)
+               // total
+         // if (  total from loop // createtotla lin 31)   
+                  //diffcore = 
+                   //bestmatch = freiendsaraay[i]
     }
-
-
+// push currentuser to friends array
+// res.json ({ user: bestmatch, diffscore:score})
 })
 }
