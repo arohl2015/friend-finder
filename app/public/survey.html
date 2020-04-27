@@ -9,10 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 <!-- The below holds my code to create the survey questions with a dropdown for the responses ranked from 1-5 -->
+
 <body>
     <div class="container content">
         <h1>Survey Questions</h1>
@@ -156,37 +155,41 @@
             </div>
         </form>
         <div class="text-center">
-            <button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
+            <button id="submitButton" button type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
         </div>
         <br>
         <br>
-<!-- Modal needs to pop after the user survery is completed-->
-<!-- Using pre-built bootstrap modal for easier completion -->
-<div class="modal fade" id="friendModal" role="dialog">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Meet your New Friend!</h4>
+        <!-- Modal needs to pop after the user survery is completed-->
+        <!-- Using pre-built bootstrap modal for easier completion -->
+        <div class="modal fade" id="friendModal" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Meet your New Friend!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h3 id="newFriend"></h3>
+                        <img id="newFriendPhoto" src="#">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          <h3 id=""></h3>
-          <img id="" src="">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  
+
 
         <!-- Re-adding footer that links to the friends API and my GitHub repo -->
         <footer class="footer">
             <div class="container">
-                <p><a href="/api/friends">API Table Link</a> | <a href="https://github.com/arohl2015/friend-finder">GitHub Repo</a>
+                <p><a href="/api/friends">API Table Link</a> | <a
+                        href="https://github.com/arohl2015/friend-finder">GitHub Repo</a>
             </div>
         </footer>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js"
+            integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 
 </html>
@@ -194,7 +197,7 @@
 <!-- On click-event to take in the user input from the survey -->
 <script type="text/javascript">
     console.log("js file loaded");
-    $(".submit").on("click", function (event) {
+    $("#submitButton").on("click", function (event) {
         event.preventDefault;
         var userRecord = {
             name: $("#name").val(),
@@ -214,11 +217,11 @@
         };
         console.log(userRecord);
         // Load data from the server using a HTTP POST request:
-        $.post("/api/friends", userRecord, function(data) {
+        $.post("/api/friends", userRecord, function (data) {
+            $("#newFriend").text(data.name);
+            $("#newFriendPhoto").attr("src", data.photo);
+            $("#friendModal").modal("toggle");
+        });
 
-
-        }
-
-          
-    })
+    });
 </script>
