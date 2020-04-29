@@ -1,0 +1,17 @@
+.jumbotron {
+    background-color: lightyellow;
+    opacity: .8;
+}
+
+body {
+    background-image: url(../images/bodybgnd.jpg);
+    opacity: .9;
+}
+
+footer {
+	text-align: right;
+	background: lightyellow;
+	padding: 30px;
+    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
+    opacity: .8;
+}
