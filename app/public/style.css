@@ -4,7 +4,7 @@
 }
 
 body {
-    background-image: url(../public/assets/images/bodybgnd.jpg);
+    background-image: url(./bodybgnd.jpg);
     opacity: .9;
 }
 
