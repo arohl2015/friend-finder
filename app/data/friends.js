@@ -33,7 +33,7 @@ var friends = [
     },
      {
         name: "Barney",
-        photo: "https://www.itl.cat/pngfile/big/107-1078917_how-i-met-your-mother-images-barney-hd.png",
+        photo: "https://vignette.wikia.nocookie.net/himym/images/8/83/Rc0JG.jpg/revision/latest/scale-to-width-down/340?cb=20130113174854",
         scores: [
             "4",
             "4",
