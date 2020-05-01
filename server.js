@@ -13,6 +13,8 @@ var PORT = process.env.PORT || 3000;
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// Received route from other student who taught me this needed to be added
+// for my external CSS to run on the server and show correctly in Heroku
 app.use(express.static("./app/public"));
 
 // Need to set up server and route to a series of "route" files.
