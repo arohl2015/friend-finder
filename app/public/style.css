@@ -3,19 +3,39 @@
     opacity: .8;
 }
 
-body {
+#surveyBtn, #submitButton {
+    background-color: black;
+    color: white;
+    opacity: .7;
+}
+
+#home {
     background-image: url(./bodybgnd.jpg);
     opacity: .9;
 }
 
+#survey {
+    background-image: url(./light-green-background.jpg);
+}
+
 footer {
-	text-align: right;
+    text-align: right;
 	background: lightyellow;
 	padding: 30px;
     box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.2);
     opacity: .8;
 }
 
-h1, h5 {
+a {
+    color: green;
+    font-weight: bolder;
+}
+
+h1, h4, p {
     font-family: 'Noto Sans', sans-serif;
+    font-weight: bolder;
+}
+
+h5 {
+    font-family: 'Courier New', Courier, monospace;
 }
