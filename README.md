@@ -14,8 +14,35 @@ How I Met My Friend is a fun quiz that invites a user to answer a series of ques
 ## App Example:
 ​
 <a href="https://friend-finder-25.herokuapp.com/" target="_blank">
-   <img src="app\public\example.PNG.">
+   <img src="app\public\example.PNG">
 </a>
+
+###### Please Note:
+By clicking on the Maclaren's Friend Network link, you'll see all the characters (and the one created for the user). Clicking the the repo link will take you directly to the app.
+
+## Technologies Used:
+-   HTML
+-   CSS
+-	Javascript
+-	Node.js
+-	NPM packages:
+    -	Express
+    -   Path
+-   Heroku
+-   GitHub
+
+#### Go to npmjs if you want to know more about:
+
+1. **Express**:  https://www.npmjs.com/package/express
+2. **Path**: https://www.npmjs.com/package/path
+
+## Future Enhancements:
+My first step would be to clean up the code and rounting structure within the files to more cleanly link the CSS and files. Next, I'd make enhancements around the modal - specifically, a better interface for the user when they receive their match and an auto reset on the form. Last, I'd like to enhance to friend network to include more friends for the user to conenct with.
+
+## Connect with Me & View my Work:
+- <a href="https://arohl2015.github.io/Updated-Portfolio/" target="_blank"> Portfolio </a>
+- <a href="https://github.com/arohl2015" target="_blank"> GitHub </a>
+- <a href="www.linkedin.com/in/aprilrohlcfp" target="_blank"> LinkedIn </a>
 
 
 
